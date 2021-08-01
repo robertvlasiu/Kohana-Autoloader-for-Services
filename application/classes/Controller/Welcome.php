@@ -5,7 +5,7 @@ class Controller_Welcome extends Controller {
 	public function action_index()
 	{
 
-	    $robert = new Robert(10);
+	    $robert = new Robert2(10);
 	    $robert->execute(5);
 //
 //	    $robert = new Services_RobertTest(10);

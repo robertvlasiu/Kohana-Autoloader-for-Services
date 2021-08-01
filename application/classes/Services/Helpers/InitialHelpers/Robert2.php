@@ -1,6 +1,6 @@
 <?php
 
-class Robert
+class Robert2
 {
     private $number;
 
