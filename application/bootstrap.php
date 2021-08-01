@@ -39,8 +39,10 @@ setlocale(LC_ALL, 'en_US.utf-8');
  * @link http://www.php.net/manual/function.spl-autoload-register
  */
 spl_autoload_register(array('Kohana', 'auto_load'));
-spl_autoload_register(array('ServicesAutoloader', 'loadServices'));
 
+spl_autoload_register(function($class) {
+    ServicesAutoloader::autoLoadClass($class, 'classes/Services');
+});
 
 /**
  * Optionally, you can enable a compatibility auto-loader for use with
